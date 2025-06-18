@@ -1,0 +1,4 @@
+3. Plan for the Program:
+Command-line Parsing: We'll use the flag package to parse the command-line arguments.
+Coloring Logic: We’ll parse the --color flag and the target substring, and then we’ll color the matching substring or the entire string using ANSI codes.
+String Replacement: If a substring is provided, we'll replace the occurrences of that substring with a colored version.
