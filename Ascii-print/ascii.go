@@ -39,35 +39,25 @@ func BannerLoader(path string) (map[rune][]string, error) {
 }
 
 var TerminalColors = map[string]string{
-	"reset": "\033[0m",
-	"bold":  "\033[1m",
-
-	// Dark (standard) colors
-	"darkRed":     "\033[31m",
-	"darkGreen":   "\033[32m",
-	"darkYellow":  "\033[33m",
-	"darkBlue":    "\033[34m",
-	"darkMagenta": "\033[35m",
-	"darkCyan":    "\033[36m",
-	"darkWhite":   "\033[37m",
-
-	// Bright colors
-	"brightRed":     "\033[91m",
-	"brightGreen":   "\033[92m",
-	"brightYellow":  "\033[93m",
-	"brightBlue":    "\033[94m",
-	"brightMagenta": "\033[95m",
-	"brightCyan":    "\033[96m",
-	"brightWhite":   "\033[97m",
-
-	// Aliases for standard colors
-	"red":     "\033[31m",
-	"green":   "\033[32m",
-	"yellow":  "\033[33m",
-	"blue":    "\033[34m",
-	"magenta": "\033[35m",
-	"cyan":    "\033[36m",
-	"white":   "\033[37m",
+	"reset":     "\033[0m",
+	"black":     "\033[30m",
+	"red":       "\033[31m",
+	"green":     "\033[32m",
+	"yellow":    "\033[33m",
+	"blue":      "\033[34m",
+	"magenta":   "\033[35m",
+	"cyan":      "\033[36m",
+	"white":     "\033[37m",
+	"sky":       "\033[38;5;111m",
+	"orange":    "\033[38;5;208m",
+	"forest":    "\033[38;5;28m",
+	"ocean":     "\033[38;5;27m",
+	"lavender":  "\033[38;5;183m",
+	"rose":      "\033[38;5;197m",
+	"lemon":     "\033[38;5;226m",
+	"turquoise": "\033[38;5;80m",
+	"cherry":    "\033[38;5;161m",
+	"emerald":   "\033[38;5;46m",
 }
 
 func PrintAscii(text, color string, banner map[rune][]string) {
@@ -84,7 +74,6 @@ func PrintAscii(text, color string, banner map[rune][]string) {
 }
 
 func PrintAsciiColor(str, color, sub string, banner map[rune][]string) {
-
 	// Step 1: Track which positions should be highlighted
 	highlight := make([]bool, len(str))
 	for i := 0; i <= len(str)-len(sub); i++ {
