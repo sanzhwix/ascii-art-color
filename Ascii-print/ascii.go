@@ -39,17 +39,19 @@ func BannerLoader(path string) (map[rune][]string, error) {
 }
 
 var TerminalColors = map[string]string{
-	"reset":   "\033[0m",
-	"bold":    "\033[1m",
-	"red":     "\033[31m",
-	"green":   "\033[32m",
-	"yellow":  "\033[33m",
-	"blue":    "\033[34m",
-	"magenta": "\033[35m",
-	"cyan":    "\033[36m",
-	"white":   "\033[37m",
+	"reset": "\033[0m",
+	"bold":  "\033[1m",
 
-	// Яркие версии
+	// Dark (standard) colors
+	"darkRed":     "\033[31m",
+	"darkGreen":   "\033[32m",
+	"darkYellow":  "\033[33m",
+	"darkBlue":    "\033[34m",
+	"darkMagenta": "\033[35m",
+	"darkCyan":    "\033[36m",
+	"darkWhite":   "\033[37m",
+
+	// Bright colors
 	"brightRed":     "\033[91m",
 	"brightGreen":   "\033[92m",
 	"brightYellow":  "\033[93m",
@@ -57,6 +59,15 @@ var TerminalColors = map[string]string{
 	"brightMagenta": "\033[95m",
 	"brightCyan":    "\033[96m",
 	"brightWhite":   "\033[97m",
+
+	// Aliases for standard colors
+	"red":     "\033[31m",
+	"green":   "\033[32m",
+	"yellow":  "\033[33m",
+	"blue":    "\033[34m",
+	"magenta": "\033[35m",
+	"cyan":    "\033[36m",
+	"white":   "\033[37m",
 }
 
 func PrintAscii(text, color string, banner map[rune][]string) {
