@@ -1,20 +1,19 @@
 package main
 
 import (
-	AsciiPrint "ascii/Ascii-print"
-	checker "ascii/check"
 	"flag"
 	"fmt"
 	"strings"
+
+	AsciiPrint "ascii/Ascii-print"
+	checker "ascii/check"
 )
 
 func main() {
-
 	colorFlag := flag.String("color", "reset", "Color to print text with")
 	flag.Parse()
 
 	args := flag.Args()
-	fmt.Println(args)
 
 	input := args[0]
 
